@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Twenty20Systems</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+
+    <div class="container">
+        <div class="grid-item">
+            <div class="user-form">
+                <form name="google-sheet">
+    
+                    <div class="user-input">
+                        <div class="email">
+                            <input type="email" id="email" placeholder="Email" name="Email" required>
+                        </div>
+                        
+                        <div class="employee-id">
+                            <input type="text" placeholder="Employee Id" id="employee-id" name="Employee Id" required>
+                        </div>
+                        
+                        <div class="dropdown">
+                            <!-- <input type="button" class="dropbtn" value="Category"> -->
+
+                            <div class="dropdown-content" id="dropdown-content">
+                                <select name="Expense Category" id="category-dropdown">
+
+                                    <option value="none" class="dropbtn" selected disabled hidden>Expense Category</option>
+    
+                                    <option value="Accommodation" >Accommodation</option>
+    
+                                    <option value="Celebration" >Celebration</option>
+    
+                                    <option value="Certifications" >Certifications</option>
+    
+                                    <option value="Client Expenses" >Client Expenses</option>
+    
+                                    <option value="Hardware" >Hardware - Laptop,Headphones,Mouse</option>
+    
+                                    <option value="Gym" >Gym</option>
+    
+                                    <option value="Internet" >Internet connection</option>
+    
+                                    <option value="Transport" >Transport</option>
+    
+                                    <option value="Meals" >Meals</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <!-- <div class="dropdown">
+                            <input type="button" class="dropbtn" value="Category">
+                            <div class="dropdown-content" id="dropdown-content">
+
+                                <input type="button" id="dropdown-content" value="Accommodation" name="Category">
+
+                                <a href="#" id="accommodation-btn" class="category-drop" >Accommodation<input type="hidden" value="Accommodation" name="Category" class="category-drop"></a>
+                                
+        
+                                
+
+                                <a href="#" id="celebration-btn" class="category-drop">Celebration<input type="hidden" value="Celebration" name="Category" class="category-drop"></a>
+
+                                <a href="#certifications" class="category-drop">Certifications</a>
+                                <a href="#client">Client</a>
+                                <a href="#hardware">Hardware - Laptop,Headphones,Mouse</a>
+                                <a href="#gym">Gym</a>
+                                <a href="#internet">Internet</a>
+                                <a href="#transport">Transport</a>
+                                <a href="#meals">Meals</a>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    <div class="category-toggle" id="category-toggle">
+                            <div class="reason">
+                                <input type="text" placeholder="Reason" id="expense-reason" name="Reason">
+                            </div>
+                            
+                            <div class="currency">
+                                <input type="checkbox" name="Currency" id="currency" value="INR">
+                                <label for="currency">INR(₹)</label>
+                                
+                                <input type="checkbox" value="USD" id="currency" name="Currency">
+                                <label for="currency">USD($)</label>
+                            </div>
+        
+                            <div class="amount">
+                                <input type="number" placeholder="Amount" id="expense-amount" name="Amount">
+                            </div>
+                            
+                            <div class="from-date">
+                                <label for="expense-from">Period of expense - From</label>
+                                <input type="date" id="expense-from" name="Period of expense - From">
+                            </div>
+        
+                            <div class="to-date">
+                                <label for="expense-to">Period of expense - To</label>
+                                <input type="date" id="expense-to" name="Period of expense - To">
+                            </div>
+
+                            <div class="btn">
+                                <button type="submit" class="update-btn">Update</button>
+                            </div>
+
+                        <!-- <div class="celebration" id="celebration-display">
+                            <div class="reason">
+                                <input type="text" placeholder="Reason" id="expense-reason" name="Reason">
+                            </div>
+                            
+                            <div class="currency">
+                                <input type="checkbox" name="Currency" id="currency" value="INR">
+                                <label for="currency">INR(₹)</label>
+                                
+                                <input type="checkbox" value="USD" id="currency" name="Currency">
+                                <label for="currency">USD($)</label>
+                            </div>
+        
+                            <div class="amount">
+                                <input type="number" placeholder="Amount" id="expense-amount" name="Amount">
+                            </div>
+                            
+                            <div class="from-date">
+                                <label for="expense-from">Period of expense - From</label>
+                                <input type="date" id="expense-from" name="Period of expense - From">
+                            </div>
+        
+                            <div class="to-date">
+                                <label for="expense-to">Period of expense - To</label>
+                                <input type="date" id="expense-to" name="Period of expense - To">
+                            </div>
+
+                            <div class="btn">
+                                <button type="submit" class="update-btn">Update</button>
+                            </div>
+                        </div> --> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
