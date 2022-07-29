@@ -10,6 +10,8 @@ const category_dropdown = document.getElementById('category-dropdown');
 
 const category_toggle = document.getElementById('category-toggle');
 
+const update_btn = document.getElementById('update-btn');
+
 
 category_dropdown.addEventListener('click', () => {
     if(category_toggle.style.display === 'block') {
@@ -21,13 +23,17 @@ category_dropdown.addEventListener('click', () => {
 });
 
 // Sending data to Google Sheet
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
 
     e.preventDefault();
 
     fetch(scriptUrl, {method: 'POST' , body: new FormData(form)})
         .then(response => console.log('Success', response))
         .catch(error => console.error('Error!', error.message))
+
+    setTimeout(() => {
+        window.location.reload();
+    },1000);
 });
 
 // checkBox
