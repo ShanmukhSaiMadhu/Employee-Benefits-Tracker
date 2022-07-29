@@ -10,17 +10,28 @@ const category_dropdown = document.getElementById('category-dropdown');
 
 const category_toggle = document.getElementById('category-toggle');
 
+const category_clear= document.querySelectorAll('.category-clear');
+
 const update_btn = document.getElementById('update-btn');
 
 
 category_dropdown.addEventListener('click', () => {
-    if(category_toggle.style.display === 'block') {
-        category_toggle.style.display = 'none';
+    if(category_toggle.style.display === 'none') {
+        
+        category_toggle.style.display = 'block';
+       
     }
     else {
-        category_toggle.style.display = 'block';
+        category_toggle.style.display = 'none';
     }
 });
+
+$('#category-dropdown').change(() =>{
+    $('.category-clear').val('');
+    // document.querySelectorAll('.category-checkbox').checked = false;
+    $(".category-checkbox").prop("checked", false);
+}); 
+
 
 // Sending data to Google Sheet
 form.addEventListener('submit', (e) => {
@@ -31,9 +42,9 @@ form.addEventListener('submit', (e) => {
         .then(response => console.log('Success', response))
         .catch(error => console.error('Error!', error.message))
 
-    setTimeout(() => {
-        window.location.reload();
-    },1000);
+    // setTimeout(() => {
+    //     window.location.reload();
+    // },1000);
 });
 
 // checkBox
