@@ -28,7 +28,6 @@ category_dropdown.addEventListener('click', () => {
 
 $('#category-dropdown').change(() =>{
     $('.category-clear').val('');
-    // document.querySelectorAll('.category-checkbox').checked = false;
     $(".category-checkbox").prop("checked", false);
 }); 
 
