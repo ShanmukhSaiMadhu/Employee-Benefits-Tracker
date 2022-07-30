@@ -39,6 +39,9 @@ form.addEventListener('submit', (e) => {
 
     fetch(scriptUrl, {method: 'POST' , body: new FormData(form)})
         .then(response => console.log('Success', response))
+        .then((html) => {
+            alert('Updated');
+        })
         .catch(error => console.error('Error!', error.message))
 
     // setTimeout(() => {
