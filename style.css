@@ -7,15 +7,18 @@
 }
 
 html, body {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     min-height: 100%;
     overflow: auto;
     background-image: url(images/bg.png);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     margin: 0;
+    padding: 0;
     font-family: "Poppins", serif;
+    position: relative;
 }
 
 .logo {
@@ -26,10 +29,11 @@ html, body {
 
 .container {
     height: auto;
-    width: 100%;
+    width: 100vw;
     margin: 2rem 0 0 2rem;
     padding: 1rem;
 }
+
 
 .user-form {
     width: 100%;
@@ -44,6 +48,13 @@ form {
     gap: 2rem;
     grid-template-rows: auto auto;
 }
+
+/* .form_alert {
+    width: 20rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+} */
 
 .user-input {
     grid-column-start: 1;
@@ -87,103 +98,14 @@ select {
     color: white;
     width: 12.5rem;
     border-radius: 5px;
-    /* margin: 5px; */
     padding: 0.5rem;
     text-align: center;
 }
-
-/* select option:hover .dropdown-list:hover{
-    background-color: #c8475ea8;
-    background: transparent;
-} */
-
-/* select .dropbtn {
-    background: #C3435A;
-    color: yellow;
-} */
-
-/* select:hover {
-    background: rgba(215, 215, 215, 0.397);
-} */
-
-/* .dropdown {
-    position: relative;
-    display: inline-block;
-    margin: 5px;
-}
-
-.dropdown-content .dropbtn {
-    width: 10rem;
-    margin-left: 1.5rem;
-    background-color: #c0435a67;
-    color: white;
-    padding: 0.6rem;
-    font-size: 15px;
-    border: none;
-    margin-right: 5px;
-}
-
-
-
-
-.dropdown-list {
-    display: none;
-    position: absolute;
-    background-color: #e7dfdf85;
-    width: auto;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-
-
-
-.dropdown-content .category-drop:hover {
-    background-color: #c8475ea8;
-    background: transparent;
-}
-
-.dropdown-content input {
-    background-color: transparent;
-    align-items: center;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 7px 12px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #c3435bde;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #C3435A;
-}
-
-.dropdownbtn:hover .dropdown-list {
-    display: block;
-} */
-
-/* .dropdown-content:hover {
-    background-color: #C3435A;
-} */
 
 .category-toggle {
    grid-column-end: 3;
    display: none;
 }
-
-/* #category_toggle {
-    display: none;
-} */
-
-/* .currency:last-child {
-    margin-left: 10rem;
-} */
 
 .from-date, .to-date {
     display: flex;

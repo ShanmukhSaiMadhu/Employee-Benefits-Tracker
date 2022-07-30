@@ -18,15 +18,15 @@
         <img src="images/logo.png" alt="Logo">
     </div>
 
-    <!-- <div class="message-container">
-
-    </div> -->
-
     <div class="container">
+        
         <div class="grid-item">
             <div class="user-form">
                 <form name="google-sheet">
-    
+                    <div id="form_alert" class="form_alert"></div>
+                    <!-- <div class="message-container" id="message-container">
+                    </div> -->
+                    
                     <div class="user-input">
                         <div class="email">
                             <input type="email" id="email" placeholder="Email" name="Email" required>
@@ -37,8 +37,6 @@
                         </div>
                         
                         <div class="dropdown">
-                            <!-- <input type="button" class="dropbtn" value="Category"> -->
-
                             <div class="dropdown-content" id="dropdown-content">
                                 <select name="Expense Category" id="category-dropdown">
 
@@ -64,29 +62,6 @@
                                 </select>
                             </div>
                         </div>
-        
-                        <!-- <div class="dropdown">
-                            <input type="button" class="dropbtn" value="Category">
-                            <div class="dropdown-content" id="dropdown-content">
-
-                                <input type="button" id="dropdown-content" value="Accommodation" name="Category">
-
-                                <a href="#" id="accommodation-btn" class="category-drop" >Accommodation<input type="hidden" value="Accommodation" name="Category" class="category-drop"></a>
-                                
-        
-                                
-
-                                <a href="#" id="celebration-btn" class="category-drop">Celebration<input type="hidden" value="Celebration" name="Category" class="category-drop"></a>
-
-                                <a href="#certifications" class="category-drop">Certifications</a>
-                                <a href="#client">Client</a>
-                                <a href="#hardware">Hardware - Laptop,Headphones,Mouse</a>
-                                <a href="#gym">Gym</a>
-                                <a href="#internet">Internet</a>
-                                <a href="#transport">Transport</a>
-                                <a href="#meals">Meals</a>
-                            </div>
-                        </div> -->
                     </div>
                     
                     <div class="category-toggle" id="category-toggle">
@@ -119,38 +94,6 @@
                             <div class="btn">
                                 <button type="submit" class="update-btn" id="update-btn">Update</button>
                             </div>
-
-                        <!-- <div class="celebration" id="celebration-display">
-                            <div class="reason">
-                                <input type="text" placeholder="Reason" id="expense-reason" name="Reason">
-                            </div>
-                            
-                            <div class="currency">
-                                <input type="checkbox" name="Currency" id="currency" value="INR">
-                                <label for="currency">INR(₹)</label>
-                                
-                                <input type="checkbox" value="USD" id="currency" name="Currency">
-                                <label for="currency">USD($)</label>
-                            </div>
-        
-                            <div class="amount">
-                                <input type="number" placeholder="Amount" id="expense-amount" name="Amount">
-                            </div>
-                            
-                            <div class="from-date">
-                                <label for="expense-from">Period of expense - From</label>
-                                <input type="date" id="expense-from" name="Period of expense - From">
-                            </div>
-        
-                            <div class="to-date">
-                                <label for="expense-to">Period of expense - To</label>
-                                <input type="date" id="expense-to" name="Period of expense - To">
-                            </div>
-
-                            <div class="btn">
-                                <button type="submit" class="update-btn">Update</button>
-                            </div>
-                        </div> --> 
                     </div>
                 </form>
             </div>

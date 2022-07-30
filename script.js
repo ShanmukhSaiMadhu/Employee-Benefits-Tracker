@@ -6,13 +6,13 @@ const form = document.forms['google-sheet'];
 
 const category_dropdown = document.getElementById('category-dropdown');
 
-// const category_drop = document.querySelectorAll('.category-drop')
-
 const category_toggle = document.getElementById('category-toggle');
 
 const category_clear= document.querySelectorAll('.category-clear');
 
 const update_btn = document.getElementById('update-btn');
+
+const message = document.getElementById('message');
 
 
 category_dropdown.addEventListener('click', () => {
@@ -38,15 +38,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     fetch(scriptUrl, {method: 'POST' , body: new FormData(form)})
-        .then(response => console.log('Success', response))
-        .then((html) => {
-            alert('Updated');
-        })
-        .catch(error => console.error('Error!', error.message))
+        .then(response => $('#form_alert').html("<div class='alert rounded text-center w-75 alert-success'>Google Sheet updated successfully!</div>"))
+        .catch(error => $('#message-container').html("<div class='alert alert-danger'>Update failed!</div>"))
 
-    // setTimeout(() => {
-    //     window.location.reload();
-    // },1000);
+    setTimeout(() => {
+        $('#form_alert').html("");
+    },6000);
 });
 
 // checkBox
