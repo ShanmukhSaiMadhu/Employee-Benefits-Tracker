@@ -40,10 +40,10 @@ form.addEventListener('submit', (e) => {
     fetch(scriptUrl, {method: 'POST' , body: new FormData(form)})
         .then(response => $('#form_alert').html("<div class='alert rounded text-center w-75 alert-success'>Google Sheet updated successfully!</div>"))
         .catch(error => $('#message-container').html("<div class='alert alert-danger'>Update failed!</div>"))
-
+        
     setTimeout(() => {
         $('#form_alert').html("");
-    },6000);
+    },5000)
 });
 
 // checkBox
