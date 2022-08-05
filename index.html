@@ -40,7 +40,7 @@
                             <div class="dropdown-content" id="dropdown-content">
                                 <select name="Expense Category" id="category-dropdown">
 
-                                    <option value="none" class="dropbtn" selected disabled hidden>Expense Category</option>
+                                    <option value="none" class="dropbtn" id="dropbtn" selected disabled hidden>Expense Category</option>
     
                                     <option value="Accommodation" >Accommodation</option>
     
@@ -96,6 +96,8 @@
                             </div>
                     </div>
                 </form>
+                
+                <input type="button" onclick="reload()" value="Submit" class="btn submit-btn" id="submit-btn">
             </div>
         </div>
     </div>
