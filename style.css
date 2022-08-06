@@ -23,7 +23,7 @@ html, body {
 .container {
     height: auto;
     width: 100vw;
-    margin: 2rem 0 0 2rem;
+    margin: 0 auto;
     padding: 1rem;
 }
 
@@ -34,18 +34,6 @@ h1 {
     margin: 0;
     transform: skew(-15deg);
     letter-spacing: 0.02em;
-}
-
-@media screen and (max-width: 768px) {
-    h1 {
-        position: relative;
-        font-family: 'Exo';
-        text-align: center;
-        font-size: 3em;
-        margin: 0;
-        transform: skew(-15deg);
-        letter-spacing: 0.02em;
-    }
 }
     
     h1::after {
@@ -135,7 +123,8 @@ select {
 }
 
 .category-toggle {
-    margin: 5px;
+    /* margin: 3px; */
+    margin-right: 1rem;
     font-weight: bold;
    grid-column-end: 3;
    display: none;
@@ -207,6 +196,9 @@ select {
         position: relative;
     }
 
+    body {
+        width: 100%;
+    }
     
     .container {
         height: auto;
@@ -214,6 +206,16 @@ select {
         margin: 2rem 0 0 1rem;
         padding: 1rem;
     }
+
+    /* h1 {
+        position: relative;
+        font-family: 'Exo';
+        font-size: 3em;
+        margin: 0 2rem 2rem 2rem;
+        transform: skew(-15deg);
+        letter-spacing: 0.02em;
+        text-align: center;
+    } */
 
     .user-form {
         width: 100%;
@@ -224,7 +226,7 @@ select {
     
     form {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 40% 60%;
         gap: 2rem;
         grid-template-rows: auto auto;
     }
@@ -265,6 +267,7 @@ select {
     .category-toggle {
         grid-column-start: 2;
         display: none;
+        width: 100%;
     }
 
     .form_alert {
@@ -274,39 +277,45 @@ select {
     }
 }
 
-@media screen and  (max-width: 550px) {
+@media screen and  (max-width: 500px) {
 
     html, body {
         width: 100vw;
         height: 100%;
-        overflow: auto;
+        overflow-x: hidden;
         background: url(/images/bg.png) no-repeat center center fixed;
         min-height: 100%;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         font-family: "Poppins", serif;
         position: relative;
+        /* overflow-x: hidden; */
+    }
+
+    body {
+        width: 100%;
     }
 
     
     .container {
         height: auto;
         width: 100vw;
-        margin: 2rem 0 0 1rem;
+        margin: 0 auto;
         padding: 1rem;
     }
 
     h1 {
         position: relative;
         font-family: 'Exo';
-        font-size: 3em;
-        margin: 0 1rem 4rem 1rem;
+        font-size: 2em;
+        margin: 0 2rem 2rem 2rem;
         transform: skew(-15deg);
         letter-spacing: 0.02em;
+        text-align: center;
     }
 
     .user-form {
@@ -314,17 +323,19 @@ select {
         height: 100%;
         background-color: transparent;
         margin-top: 1rem;
+        justify-content: center;
     }
     
     form {
         display: grid;
-        grid-template-columns: 70% 30%;
+        grid-template-columns: 80% 20%;
         justify-content: center;
         align-items: center;
         align-content: center;
         gap: 1rem;
         grid-template-rows: auto auto;
-        margin: 2rem 0 0 3rem;
+        margin: 1rem 2rem 0 3rem;
+        
     }
 
     input {
@@ -354,7 +365,7 @@ select {
         font-weight: bold;
         background-color: #c0435abb;
         color: white;
-        width: 10rem;
+        width: 10.5rem;
         border-radius: 5px;
         padding: 0.5rem;
         text-align: center;
@@ -363,6 +374,7 @@ select {
     .category-toggle {
         grid-column-start: 1;
         display: none;
+        justify-content: center;
     }
 
     .from-date, .to-date {
@@ -372,8 +384,8 @@ select {
     }
 
     .form_alert {
-        width: 25rem;
-        margin-right: 1rem;
+        width: 21rem;
+        margin-right: 2rem;
         transition-timing-function: ease-out;
     }
 }
