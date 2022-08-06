@@ -258,6 +258,23 @@ select {
 
 @media screen and  (max-width: 550px) {
 
+    html, body {
+        width: 100vw;
+        height: 100%;
+        overflow: auto;
+        background: url(/images/bg.png) no-repeat center center fixed;
+        min-height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", serif;
+        position: relative;
+    }
+
+    
     .container {
         height: auto;
         width: 100vw;
@@ -265,45 +282,57 @@ select {
         padding: 1rem;
     }
 
+    h1 {
+        position: relative;
+        font-family: 'Exo';
+        font-size: 3em;
+        margin: 0 1rem 4rem 1rem;
+        transform: skew(-15deg);
+        letter-spacing: 0.02em;
+    }
+
     .user-form {
         width: 100%;
         height: 100%;
         background-color: transparent;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     
     form {
         display: grid;
-        grid-template-columns:10% 90%;
-        gap: 2rem;
-        grid-template-rows: auto auto;
+        grid-template-columns: 70% 30%;
         justify-content: center;
+        align-items: center;
         align-content: center;
+        gap: 1rem;
+        grid-template-rows: auto auto;
+        margin: 2rem 0 0 3rem;
     }
 
-    .user-input {
-        grid-column-start: 2;
-    }
-
-    input {
-        background: rgba(223, 218, 218, 0.479);
-        color: white;
-        outline: none;
+    select {
+        -webkit-appearance: none;
         border: none;
-        border-radius: 5px;
-        margin: 3px;
-        padding: 0.5rem;
-        font-size: 1rem;
-        font-weight: 500;
+        outline: none;
         cursor: pointer;
+        margin: 5px;
+        font-weight: bold;
+        background-color: #c0435abb;
+        color: white;
+        width: 12.5rem;
+        border-radius: 5px;
+        padding: 0.5rem;
+        text-align: center;
     }
 
     .category-toggle {
-        grid-column-start: 2;
+        grid-column-start: 1;
         display: none;
-        justify-content: center;
-        align-content: center;
     }
-    
+
+    .form_alert {
+        width: 25rem;
+        margin-right: 1rem;
+        transition-timing-function: ease-out;
+    }
 }
 
