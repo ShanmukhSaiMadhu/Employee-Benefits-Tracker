@@ -250,7 +250,7 @@ select {
     }
 
     .form_alert {
-        width: 20rem;
+        width: 25rem;
         margin-right: 1rem;
         transition-timing-function: ease-out;
     }
