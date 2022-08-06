@@ -274,7 +274,7 @@ select {
     
     form {
         display: grid;
-        grid-template-columns:20% 80%;
+        grid-template-columns:10% 90%;
         gap: 2rem;
         grid-template-rows: auto auto;
         justify-content: center;
