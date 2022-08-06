@@ -9,12 +9,10 @@
 html, body {
     width: 100vw;
     height: 100%;
-    min-height: 100%;
     overflow: auto;
-    background-image: url(images/bg.png);
+    background: url(/images/banner.jpg) no-repeat center center fixed;
+    min-height: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
@@ -103,40 +101,10 @@ h1 {
 
 form {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 50%;
     gap: 2rem;
     grid-template-rows: auto auto;
 }
-
-@media screen and  (max-width: 550px) {
-    .container {
-        height: auto;
-        width: 100vw;
-        margin: 2rem 0 0 1rem;
-        padding: 1rem;
-    }
-
-    .user-form {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        margin-top: 2rem;
-    }
-    
-    form {
-        display: grid;
-        /* grid-template-columns: 40% 60%; */
-        gap: 2rem;
-        grid-template-rows: auto auto;
-    }
-}
-
-/* .form_alert {
-    width: 20rem;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-} */
 
 .user-input {
     grid-column-start: 1;
@@ -164,11 +132,6 @@ input::placeholder {
     font-weight:500;
 }
 
-.category-toggle {
-    margin: 5px;
-    font-weight: bold;
-}
-
 select {
     -webkit-appearance: none;
     border: none;
@@ -185,32 +148,11 @@ select {
 }
 
 .category-toggle {
+    margin: 5px;
+    font-weight: bold;
    grid-column-end: 3;
    display: none;
 }
-
-@media screen and  (max-width: 550px) {
-    select {
-        -webkit-appearance: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        margin: 5px;
-        font-weight: bold;
-        background-color: #c0435abb;
-        color: white;
-        width: 12.5rem;
-        border-radius: 5px;
-        padding: 0.5rem;
-        text-align: center;
-    }
-
-    .category-toggle {
-        grid-column-start: 1;
-        display: none;
-    }
-}
-
 
 .from-date, .to-date {
     display: flex;
@@ -260,7 +202,66 @@ select {
     margin: 0 auto;
 }
 
-@media screen and  (max-width: 550px) {
+@media screen and  (max-width: 768px) {
+
+    html, body {
+        width: 100vw;
+        height: 100%;
+        overflow: auto;
+        background: url(/images/bg.png) no-repeat center center fixed;
+        min-height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", serif;
+        position: relative;
+    }
+
+    
+    .container {
+        height: auto;
+        width: 100vw;
+        margin: 2rem 0 0 1rem;
+        padding: 1rem;
+    }
+
+    .user-form {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        margin-top: 2rem;
+    }
+    
+    form {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 2rem;
+        grid-template-rows: auto auto;
+    }
+
+    select {
+        -webkit-appearance: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 5px;
+        font-weight: bold;
+        background-color: #c0435abb;
+        color: white;
+        width: 12.5rem;
+        border-radius: 5px;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .category-toggle {
+        grid-column-start: 2;
+        display: none;
+    }
+
     .form_alert {
         width: 20rem;
         margin-right: 1rem;
@@ -268,4 +269,41 @@ select {
     }
 }
 
+@media screen and  (max-width: 550px) {
+
+    .container {
+        height: auto;
+        width: 100vw;
+        margin: 2rem 0 0 1rem;
+        padding: 1rem;
+    }
+
+    .user-form {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        margin-top: 2rem;
+    }
+    
+    form {
+        display: grid;
+        grid-template-columns:20% 80%;
+        gap: 2rem;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .user-input {
+        grid-column-start: 2;
+    }
+
+    .category-toggle {
+        grid-column-start: 2;
+        display: none;
+        justify-content: center;
+        align-content: center;
+    }
+    
+}
 

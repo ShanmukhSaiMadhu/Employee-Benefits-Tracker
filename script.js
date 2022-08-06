@@ -29,10 +29,10 @@ category_dropdown.addEventListener('click', () => {
 
 
 
-$('#category-dropdown').change(() =>{
-    $('.category-clear').val('');
-    $(".category-checkbox").prop("checked", false);
-}); 
+// $('#category-dropdown').change(() =>{
+//     $('.category-clear').val('');
+//     $(".category-checkbox").prop("checked", false);
+// }); 
 
 
 // Sending data to etails
