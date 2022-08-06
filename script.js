@@ -2,11 +2,7 @@ const scriptUrl = 'https://script.google.com/macros/s/AKfycbwZYEuJWzqL0nxViFYMDK
 
 const form = document.forms['google-sheet'];
 
-
-
 const category_dropdown = document.getElementById('category-dropdown');
-
-// const dropbtn = document.getElementById('dropbtn');
 
 const category_toggle = document.getElementById('category-toggle');
 
@@ -20,10 +16,6 @@ const submit_btn = document.getElementById('submit-btn');
 
 
 category_dropdown.addEventListener('click', () => {
-
-    // dropbtn.addEventListener('click', () => {
-    //     category_toggle.style.display = 'none';
-    // });
 
     if(category_toggle.style.display === 'none') {
         
