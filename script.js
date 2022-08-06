@@ -48,6 +48,9 @@ form.addEventListener('submit', (e) => {
         $('#form_alert').html("");
     },5000)
 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     submit_btn.style.display = 'block';
 });
 
