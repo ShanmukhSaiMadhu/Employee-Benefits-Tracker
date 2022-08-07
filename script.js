@@ -27,15 +27,7 @@ category_dropdown.addEventListener('click', () => {
     }
 });
 
-
-
-// $('#category-dropdown').change(() =>{
-//     $('.category-clear').val('');
-//     $(".category-checkbox").prop("checked", false);
-// }); 
-
-
-// Sending data to etails
+// Sending data to Google sheet
 form.addEventListener('submit', (e) => {
 
     e.preventDefault();
