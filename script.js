@@ -46,6 +46,14 @@ form.addEventListener('submit', (e) => {
     submit_btn.style.display = 'block';
 });
 
+//When Update btn click category value delted
+
+$('#category-dropdown').change(() =>{
+    $('.category-clear').val('');
+    // document.querySelectorAll('.category-checkbox').checked = false;
+    $(".category-checkbox").prop("checked", false);
+}); 
+
 //Submit-btn 
 
 let reload = () => {
